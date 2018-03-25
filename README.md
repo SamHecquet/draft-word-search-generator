@@ -1,8 +1,11 @@
 I needed a simple skeleton with Webpack for my new projects including:
 
 - [SASS](http://sass-lang.com/)
-- [Babel](https://babeljs.io/)
 - [jQuery](https://jquery.com/)
+- [PostCSS] (http://postcss.org/)
+    - [PreCSS] (https://github.com/jonathantneal/precss)
+    - [Autoprefixer] (https://github.com/postcss/autoprefixer)
+- [Babel](https://babeljs.io/)
 
 ## Steps
 
