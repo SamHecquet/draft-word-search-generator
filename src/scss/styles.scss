@@ -1,0 +1,21 @@
+#content {
+  background-color: #eee;
+  padding: 1em;
+}
+
+form {
+  .input__error {
+    color: #de0404;
+
+    input,
+    textarea,
+    select {
+      border: 1px solid #de0404
+    }
+  }
+
+  span.error {
+    color: #de0404;
+    display: block;
+  }
+}

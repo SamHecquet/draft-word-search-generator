@@ -8,7 +8,7 @@ module.exports = {
         publicPath: '/dist/'
     },
     module: {
-        loaders: [
+        rules: [
           {
             test: /\.scss$/,
             use: [{
@@ -35,8 +35,11 @@ module.exports = {
           },
           {
             test: /\.js$/,
-            loader: 'babel-loader?presets[]=es2015'
-          },
+            exclude: /(node_modules|bower_components)/,
+            use: {
+              loader: 'babel-loader'
+            }
+          }
         ]
     },
 

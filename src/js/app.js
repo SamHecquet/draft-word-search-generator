@@ -1,6 +1,5 @@
-// require('../scss/main.scss');
-import './../scss/main.scss';
+import './../scss/main.scss'
 
-
-window.jQuery = window.$ = require('jquery');
-require('./main.js');
+import 'babel-polyfill'
+window.jQuery = window.$ = require('jquery')
+require('./main.js')

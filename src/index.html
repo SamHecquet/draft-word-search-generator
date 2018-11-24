@@ -1,12 +1,76 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title></title>
-        <script src="./dist/bundle.min.js"></script>
-    </head>
-    <body>
-        <h1>coucou</h1>
-    </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title></title>
+</head>
+
+<body>
+  <h1>coucou</h1>
+  <div id="main">
+    <form id="word" method="post">
+      <legend>Configuration</legend>
+      <div>
+        <label for="words-list">Words list (csv file, separated by a line break):</label>
+        <input type="file" id="words-list" name="words-list">
+      </div>
+      <div>
+        <label for="dirty-words-list">Forbidden Words list (csv file, separated by a line break. By default, this <a
+            href="https://github.com/turalus/encycloDB/blob/master/Dirty%20Words/DirtyWords.csv" target="_blank">list</a>
+          is used :</label>
+        <input type="file" id="dirty-words-list" name="dirty-words-list" class="optional">
+      </div>
+      <div>
+        <label for="row-number">Row Number</label>
+        <input type="text" id="row-number" name="row-number" value="30" placeholder="30">
+      </div>
+      <div>
+        <label for="column-number">Column Number</label>
+        <input type="text" id="column-number" name="column-number" value="30" placeholder="30">
+      </div>
+      <div>
+        <label for="font-size">Font Size:</label>
+        <input name="font-size" type="integer" value="25" placeholder="25" id="font-size">
+      </div>
+      <div>
+        <label for="font-name">Font Name:</label>
+        <input name="font-name" type="text" value="Lucida Grande" placeholder="Lucida Grande" id="font-name">
+      </div>
+      <div>
+        <label for="font-color">Font Color:</label>
+        <input name="font-color" type="text" value="#1A73E8" placeholder="#1A73E8" id="font-color">
+      </div>
+      <div>
+        <label for="background-color">Background Color:</label>
+        <input name="background-color" type="text" value="#ffffff" placeholder="#ffffff" id="background-color">
+      </div>
+      <div>
+        <label for="letter-spacing">Letter spacing:</label>
+        <input name="letter-spacing" type="text" value="20" placeholder="20" id="letter-spacing">
+      </div>
+      <div>
+        <label for="line-height">Line Height:</label>
+        <input name="line-height" type="text" value="20" placeholder="20" id="line-height">
+      </div>
+      <div>
+        <label for="width">Width:</label>
+        <input name="width" type="text" value="1450" placeholder="1450" id="width">
+      </div>
+      <div>
+        <label for="height">Height:</label>
+        <input name="height" type="text" value="1450" placeholder="1225" id="height">
+      </div>
+      <button type="submit">Generate</button>
+    </form>
+
+    <button id="copy">Copy text</button>
+    <div id="content"></div>
+    <div id="test"></div>
+  </div>
+
+</body>
+<script src="./dist/bundle.min.js"></script>
+
 </html>
