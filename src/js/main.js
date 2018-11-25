@@ -86,6 +86,7 @@ const generatePuzzle = (event) => {
           backgroundColor: formData['background-color'],
           letterSpacing: formData['letter-spacing'],
           lineHeight: formData['line-height'],
+          fileName: formData['filename'],
         }
         console.log(drawingOptions)
         console.log(dirtyWordList)
@@ -126,7 +127,7 @@ const generatePuzzle = (event) => {
 
 const drawPuzzle = (target, puzzle, drawingOptions = {}) => {
   $(target).html()
-  const { fontName, fontColor, backgroundColor } = drawingOptions
+  const { fontName, fontColor, backgroundColor, fileName } = drawingOptions
   var puzzleHeight = puzzle.length
   const fontSize = parseInt(drawingOptions.fontSize)
   const letterSpacing = parseInt(drawingOptions.letterSpacing)
@@ -146,6 +147,8 @@ def RGBfromHex(hex):<br>
   return(r1, g1, b1)<br>
 newPage(${width}, ${sizeHeight})
 font("${fontName}", ${fontSize})<br>
+#if you want to use a personal font, it should be <br>
+#font("/path/to/${fontName}.otf", 25)<br>
 fill(*RGBfromHex("${backgroundColor}"))<br>
 # x, y, width and height
 rect(0, 0, width(), height())<br>
@@ -174,7 +177,7 @@ textBox("${row[j]}", (${x}, ${maxHeight}, ${spaceWidth}, ${spaceHeight}), align=
     `
   }
   puzzleString += `
-saveImage("/Users/sam/assetize/projects/piptest/index4.pdf")<br>
+#saveImage("/path/to/directory/to/export/${fileName})<br>
   `
   $(target).html(puzzleString)
 }
